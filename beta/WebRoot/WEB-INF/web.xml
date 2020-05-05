@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>world</servlet-name>
+    <servlet-class>test.world</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>country</servlet-name>
+    <servlet-class>test.country</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>xiangqing</servlet-name>
+    <servlet-class>test.xiangqing</servlet-class>
+  </servlet>
+
+	<!-- 过滤器配置 -->
+	<filter>
+	  	<!-- 过滤器名称(一般和过滤器类一致) -->
+	  	<filter-name>MyFilter</filter-name>
+	  	<!-- 过滤器类路径  (包名.类名) -->
+	  	<filter-class>filter.MyFilter</filter-class>
+	</filter>
+	
+	<!-- 过滤器映射 -->
+	<filter-mapping>
+	  	<!-- 过滤器名称 -->
+	  	<filter-name>MyFilter</filter-name>
+	  	<!-- 过滤的路径  /*  :代表所有路径 -->
+	  	<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	
+
+  <servlet-mapping>
+    <servlet-name>world</servlet-name>
+    <url-pattern>/world</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>country</servlet-name>
+    <url-pattern>/country</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>xiangqing</servlet-name>
+    <url-pattern>/xiangqing</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
